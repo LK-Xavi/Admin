@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết nhân viên</title>
+    <style>
+        body {
+        background-color: #f8f8f8;
+        }
+
+        .container {
+        width: 90%;
+        margin: 50px auto;
+        font-family: 'Open Sans', sans-serif;
+        box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),                     0px 2px 2px 0px rgba(0,0,0,0.14),                 0px 1px 5px 0px rgba(0,0,0,0.12) !important ;
+        }
+
+        .container-header {
+        display: flex;
+        padding: 10px 15px;
+        background-color: #2A3F54;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        }
+
+        .short-profile {
+        color: white;
+        align-self: flex-end;
+        margin-left: 15px;
+        line-height: 1.5;
+        padding-bottom: 10px;
+        }
+
+        .short-profile p {
+        margin: 0;
+        }
+
+        .short-profile .full-name {
+        font-weight: bold;
+        font-size: 22pt;
+        margin-bottom: 3px;
+        }
+
+        .short-profile .location {
+        position: relative;
+        font-weight: 300;
+        font-size: 16pt;
+        font-style: italic;
+        margin-left: 10px;
+        color: white;
+        padding-left: 6px;
+        padding-right: 12px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 2px;
+        background-color: #ec5032;
+        }
+
+        .short-profile .location::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -8px;
+        top: 0;
+        border-top: 0 solid transparent;
+        border-bottom: 7px solid transparent; 
+        border-right: 8px solid #e7423e;
+        }
+
+        .short-profile .position {
+        font-weight: 300;
+        font-size: 14pt;
+        margin-bottom: 8px;
+        }
+
+        .contact-info {
+        display: flex;
+        }
+
+        .contact-info span:first-child {
+        margin-left: 0;
+        }
+
+        .contact-info span {
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: white;
+        border-radius: 4px;
+        color: black;
+        opacity: .7;
+        padding: 5px 10px;
+        }
+
+        .container-middle {
+        padding: 10px 15px;
+        background-color: #557daa;
+        }
+
+        .middle-profile-nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .middle-profile-nav li:first-child {
+        margin-left: 0;
+        }
+
+        .middle-profile-nav li {
+        margin-left: 15px;
+        padding: 10px;
+        background-color: white;
+        opacity: .8;
+        border-radius: 4px;
+        font-weight: bold;
+        /*   box-shadow: 0 0 3px 0px #ccc; */
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!--     SIDE AREA -->
+        <div class="sideArea">
+            <div class="avatar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
+                <div class="avatarName">Welcome,<br>???</div>
+            </div>
+            <ul class="sideMenu">
+                <li><a href="javascript:void(0)" class="has-submenu"><span class="fa fa-table"></span>TRANG CHỦ</a>
+                    <ul class="submenu">
+                        <li><a href="index.php?c=product&a=list01"><span class="fa fa-list"></span>Nhân viên</a></li>
+                        <li><a href="index.php?c=product&a=list02"><span class="fa fa-tags"></span>Dự án</a></li>
+                    </ul>
+                </li>
+                <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>THÔNG BÁO</a></li>
+                <li><a href="invoice_list.php"><span class="fa fa-money"></span>INVOICE</a></li>
+                <li><a href="user_list.php"><span class="fa fa-user-o"></span>USER</a></li>
+                <li><a href="contact_list.php"><span class="fa fa-envelope-o"></span>CÀI ĐẶT</a></li>
+            </ul>
+        </div>
+            <div class="mainContent">  
+              <div class="container-header">
+                <div class="header-avatar">
+                  <img src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="short-profile">
+                  <p class="full-name">
+                    Nguyễn Văn A
+                    <span class="location">Bos</span>
+                  </p>
+                  <p class="position">Thợ Xây chuyên ngiệp</p>
+                  <div class="contact-info">
+                    <span class="mobile-phone">
+                      phone 737 737 9
+                    </span>
+                    <span class="email">
+                      ThoXay.com
+                    </span>
+                    <br>
+                    <span class="link">
+                      <a href="">Hồ Sơ</a>
+                    </span>
+                  </div>
+                </div>
+              </div> 
+               <!-- cập nhật nhân viên -->
+               <form action="" method="POST" enctype="multipart/form-data" class="form" style="margin-top: 20px;">
+                <div class="formHeader row">
+                    <h2 class="text-1 fl">Cập nhật nhân viên</h2>
+                    <div class="fr">
+                        <button type="submit" class="btnSave bg-1 text-fff text-bold fr">Cập Nhật</button>
+                        <a href="" class="btnAdd fa fa-plus bg-1 text-fff">Tạo</a>
+                    </div>
+                </div>
+                <div class="formBody row">
+                    <div class="column s-6">
+                        <label class="inputGroup">
+                            <span>Họ và tên</span>
+                            <span><input type="text" name="price"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Giới tính</span>
+                            <span><input type="text" name="price"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Số điện thoại</span>
+                            <span><input type="text" name="note"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Địa chỉ</span>
+                            <span><input type="text" name="note"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Dự án</span>
+                            <span><input type="text" name="note"></span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Hoạt Động</span>
+                            <span>
+                                <select name="cate">
+                                    <option value="cate01">on</option>
+                                    <option value="cate02">off</option>
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="column s-6">
+                        <label class="inputGroup">
+                            <span>Từ</span>
+                            <span>
+                                <select name="cate">
+                                    <option value="cate02">Phòng tuyển dụng</option>
+                                    <option value="cate02">Alpha</option>
+                                    <option value="cate01">Nam Thăng Long</option>
+                                    <option value="cate02">Long Biên</option>
+                                    <option value="cate02">Hà Đông</option>
+                                    <option value="cate02">Đông Ngạc</option>
+                                    <option value="cate02">Gia Lâm</option>
+                                </select>
+                                <i class="btnNewInput fa fa-plus bg-1 text-fff">Chi tiết</i>
+                            </span>
+                        </label>
+                        <label class="inputGroup hide">
+                            <span>Kinh nghiệm làm việc</span>
+                            <span>
+                                <input type="text" name="cate">
+                                <select name="brand">
+                                    <option value="cate01">Điều chuyển</option>
+                                    <option value="cate02">Công tác</option>
+                                </select>
+                            </span> 
+                        </label>
+                        <label class="inputGroup">
+                            <span>ảnh</span>
+                            <input type="hidden" name="img" value="src">
+                            <span>
+                                <input type="file" name="img" onchange="getImg(this)" multiple>
+                                <img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50">
+                            </span>
+                        </label>
+                        <label class="inputGroup">
+                            <span>Hồ sơ</span>
+                            <input type="hidden" name="img" value="src">
+                            <span>
+                                <input type="file" name="img" onchange="getImg(this)" multiple>
+                                <img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50">
+                            </span>
+                        </label>
+                    </div>
+                  <!-- <div class="column">
+                      <label class="inputGroup">
+                          <span>Đóng góp</span>
+                          <textarea name="description"></textarea>
+                      </label>
+                  </div> -->
+                </div>
+            </form> 
+                        
+            </div>
+            
+        </div>
+    
+</body>
+</html>
